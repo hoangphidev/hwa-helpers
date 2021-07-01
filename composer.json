@@ -1,0 +1,62 @@
+{
+    "name": "hoangphi/hwa-helpers",
+    "license": "MIT",
+    "description": "A package about custom helpers. Create by Phi Hoang.",
+    "type": "library",
+    "keywords": [
+        "hoangphidev",
+        "helper",
+        "helpers",
+        "package",
+        "laravel",
+        "laravel-helper",
+        "laravel-helpers",
+        "laravel-package",
+        "laravel-package-helpers",
+        "laravel-package-helper",
+        "hwa-vina-helpers",
+        "hwa-helper",
+        "hwa-helpers",
+        "hoangphi-helpers",
+        "hoangphidev-helpers"
+    ],
+    "homepage": "https://github.com/hoangphidev/hwa-helpers",
+    "authors": [
+        {
+            "name": "Phi Hoang",
+            "email": "hoangphi.dev@gmail.com",
+            "homepage": "https://github.com/hoangphidev/hwa-helpers",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.2|^8.0",
+        "illuminate/support": "^5.8|^6|^7|^8",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "HoangPhi\\HwaHelpers\\": "src/"
+        },
+        "files": [
+            "helpers/hwa_commons.php",
+            "helpers/hwa_datetime.php",
+            "helpers/hwa_images.php",
+            "helpers/hwa_ipinfo.php",
+            "helpers/hwa_response_api.php"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HoangPhi\\HwaHelpers\\Providers\\HwaHelperServiceProvider"
+            ]
+        }
+    },
+    "prefer-stable": true
+}
