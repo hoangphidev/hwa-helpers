@@ -29,13 +29,6 @@ class HwaHelperServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../../config/hwa_helpers.php' => config_path('hwa_helpers.php')
         ], 'hwa_helpers');
-
-        $this->app->booted(function () {
-            date_default_timezone_set(config('hwa_helpers.timezone'));
-            $this->app->setLocale(config('hwa_helpers.locale'));
-
-            Artisan::call('optimize:clear');
-        });
     }
 }
 
